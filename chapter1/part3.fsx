@@ -1,20 +1,16 @@
-type RegisteredCustomer = { Id: string }
-
-type UnregisteredCustomer = { Id: string }
-
 type Customer =
-    | Eligible of RegisteredCustomer
-    | Registered of RegisteredCustomer
-    | Guest of UnregisteredCustomer
+    | Eligible of Id: string
+    | Registered of Id: string
+    | Guest of Id: string
 
 
 // Unregistered Customer -> basically a guest
-let sarah = Guest { Id = "Sarah" }
+let sarah = Guest "Sarah"
 
 // Registered customers
-let john = Eligible { Id = "John" }
-let mary = Eligible { Id = "Mary" }
-let richard = Registered { Id = "Richard" }
+let john = Eligible "John"
+let mary = Eligible "Mary"
+let richard = Registered "Richard"
 
 
 let calculateTotal customer spend =
