@@ -7,8 +7,6 @@
 
   <ItemGroup>
     <Compile Include="Program.fs" />
-    <None Include="listing_3_1_2.fsx" />
-    <None Include="exercise_3_1.fsx" />
   </ItemGroup>
 
   <ItemGroup>
